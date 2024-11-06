@@ -9,8 +9,8 @@
 // // Sample Output:
 // Alice;
 {
-
-    function getProperty<T,K extends keyof T>(obj:T,key:K):T[K] {
+    //<T,K extends keyof T>  = T means person object and (K extends keyof T)=means key will be union of T(Object) 
+    function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
         return obj[key]
     }
 
