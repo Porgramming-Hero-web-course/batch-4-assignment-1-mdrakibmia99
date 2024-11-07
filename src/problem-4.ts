@@ -34,18 +34,24 @@
     //  create a union type use Circle and rectangle  type
     type ShapeType = Circle | Rectangle
 
+    // type guard 
+    const isCircle=(shape:ShapeType):shape is Circle=>{
+        return shape.shape === "circle"
+    }
+    const isRectangle=(shape:ShapeType):shape is Rectangle=>{
+        return shape.shape === "rectangle"
+    }
     //   create this function for calculate circleArea, and this output can be number or void . 
-    function calculateShapeArea(shape: ShapeType): number | void {
-        if (shape.shape === 'circle') {
+    function calculateShapeArea(shape: ShapeType): number {
+        if (isCircle(shape)) {
             const area = Math.PI * shape.radius * shape.radius
             // if result like 52.254545454 then it show only 2 digit after decimal point 52.25
             return parseFloat(area.toFixed(2))
-        } else if (shape.shape === 'rectangle') {
+        } else if (isRectangle(shape)) {
             const area = shape.width * shape.height
             return parseFloat(area.toFixed(2))
         }
-        // if user not select shape value circle or reactangle s then show this messeage
-        console.log('Please type a valid shape')
+       return 0
     }
 
 
