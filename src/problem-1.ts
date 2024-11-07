@@ -8,7 +8,7 @@
 {
     function sumArray(input:number[]):number{
         const sum=input.reduce((total,num)=> total + num,0);
-        console.log(sum)
+        //console.log(sum)
       return  sum
     }
 
