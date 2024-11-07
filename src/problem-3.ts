@@ -20,7 +20,7 @@
 
     }
 
-    console.log(countWordOccurrences("TypeScript is great. I love TypeScript!", "Typescript"));
+    console.log(countWordOccurrences("I love TypeScript", "Typescript"));
     
     // previous code
     // function countWordOccurrences(sentence: string, word: string): number {
