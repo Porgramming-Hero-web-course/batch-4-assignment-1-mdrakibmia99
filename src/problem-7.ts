@@ -23,7 +23,7 @@
     // Sample Input 1:
     const car = new Car("Honda", "Civic", 2018);
     car.getCarAge();
-    console.log(car.getCarAge()) // output : 6
+  //  console.log(car.getCarAge()) // output : 6
 
 
 }
